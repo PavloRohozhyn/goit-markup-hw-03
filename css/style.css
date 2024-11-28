@@ -1,3 +1,4 @@
+/* #region Base (+reset) */
 :root {
     --iris: #4d5ae5;
     --ocean: #404bbf;
@@ -19,18 +20,55 @@ body {
     font-family: var(--font-family);
     color: var(--slate);
     background-color: #FFFFFF;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
-ul li {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+ul,
+ol {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 a {
     text-decoration: none;
+    color: currentColor;
 }
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+/* #endregion */
 
 
 /* #region Header */
+header .container {
+    border-bottom: 2px solid;
+}
+
 .header-logo {
     font-family: var(--second-family);
     font-weight: 700;
@@ -39,6 +77,9 @@ a {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--iris);
+    padding-left: 156px;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .header-logo-second {
@@ -49,7 +90,20 @@ a {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--navy-blue);
+    padding: 24px 76px 24px 0;
 }
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav-list {
+    display: flex;
+    gap: 40px;
+}
+
 
 .header-nav-link {
     font-family: var(--font-family);
@@ -67,6 +121,14 @@ a {
 
 .header-address {
     font-style: normal;
+    padding-left: 332px;
+    padding-right: 156px;
+}
+
+
+.header-address-list {
+    display: flex;
+    gap: 40px;
 }
 
 .header-address-link {
@@ -89,6 +151,16 @@ a {
 /* #region Hero*/
 .section-hero {
     background-color: var(--navy-blue);
+    display: flex;
+    flex-direction: column;
+}
+
+.container-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    padding-bottom: 188px;
 }
 
 .section-hero-title {
@@ -99,6 +171,8 @@ a {
     letter-spacing: 0.02em;
     text-align: center;
     color: var(--white);
+    padding-top: 188px;
+    max-width: 496px;
 }
 
 .section-hero-btn {
@@ -110,7 +184,9 @@ a {
     letter-spacing: 0.04em;
     color: var(--white);
     background-color: var(--iris);
-    cursor: pointer;
+    max-width: 169px;
+    border-radius: 4px;
+    padding: 16px 32px;
 }
 
 .section-hero-btn:hover,
@@ -121,17 +197,36 @@ a {
 /* #endregion */
 
 
-/* #region Benefits*/
+/* #region Values*/
 .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
     margin: -1px;
     border: 0;
+    padding: 0;
     white-space: nowrap;
     clip: rect(0, 0, 0, 0);
     clip-path: inset(50%);
     overflow: hidden;
 }
 
-.section-ben-title {
+.section-val {
+    margin: 120px 156px;
+}
+
+.container-val {
+    display: flex;
+}
+
+.section-val-list {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    gap: 24px;
+}
+
+.section-val-title {
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 20px;
@@ -140,7 +235,7 @@ a {
     color: var(--navy-blue);
 }
 
-.section-ben-desc {
+.section-val-desc {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 16px;
@@ -155,7 +250,10 @@ a {
 /* #region Team */
 .section-team {
     background-color: var(--cloud);
+
 }
+
+.container-team {}
 
 .section-team-title {
     font-family: var(--font-family);
@@ -166,10 +264,29 @@ a {
     text-align: center;
     text-transform: capitalize;
     color: var(--navy-blue);
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    padding-top: 120px;
+    padding-bottom: 72px;
+}
+
+.section-team-list {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    gap: 24px;
+    padding: 0 156px 120px;
 }
 
 .section-team-item {
     background: var(--white);
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.section-team-desc {
+    padding: 32px 16px;
 }
 
 .section-team-name {
@@ -196,6 +313,14 @@ a {
 
 
 /* #region Portfolio */
+.section-portfolio {
+    display: flex;
+}
+
+.container-portfolio {
+    padding-top: 120px;
+}
+
 .section-portfolio-title {
     font-family: var(--font-family);
     font-weight: 700;
@@ -205,6 +330,30 @@ a {
     text-align: center;
     text-transform: capitalize;
     color: var(--navy-blue);
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    padding-bottom: 72px;
+}
+
+.section-portfolio-list {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-right: 156px;
+    padding-left: 156px;
+    padding-bottom: 120px;
+}
+
+.section-portfolio-desc {
+    border-bottom: 1px solid var(--cornflower);
+    border-left: 1px solid var(--cornflower);
+    border-right: 1px solid var(--cornflower);
+    padding: 32px 16px;
+    width: 360px;
+    height: 120px;
 }
 
 .section-portfolio-name {
@@ -231,9 +380,33 @@ a {
 /* #region Footer */
 .footer {
     background-color: var(--navy-blue);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 156px;
+}
+
+.container-footer {
+    max-width: 264px;
+
+}
+
+.footer-logo {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 117%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--iris);
 }
 
 .footer-logo-second {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 117%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
     color: var(--cloud);
 }
 
@@ -244,6 +417,15 @@ a {
     line-height: 150%;
     letter-spacing: 0.02em;
     color: var(--cloud);
+    padding-top: 16px;
 }
 
 /* #endregion */
+
+
+
+
+.header-logo-second {
+
+    padding: 24px 76px 24px 0;
+}
