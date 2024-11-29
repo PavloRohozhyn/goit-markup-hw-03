@@ -89,6 +89,7 @@ address {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--iris);
+    margin-right: 76px;
 }
 
 .header-logo-second {
@@ -99,7 +100,6 @@ address {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--navy-blue);
-    margin-right: 76px
 }
 
 .header-nav {
@@ -213,8 +213,8 @@ address {
     border: 0;
     padding: 0;
     white-space: nowrap;
-    clip: rect(0, 0, 0, 0);
-    clip-path: inset(50%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
     overflow: hidden;
 }
 
@@ -345,11 +345,9 @@ address {
 
 .section-portfolio-list {
     display: flex;
-    flex-direction: row;
-    justify-items: center;
     flex-wrap: wrap;
+    column-gap: 24px;
     row-gap: 48px;
-    gap: 24px;
 }
 
 .section-portfolio-item {
@@ -361,8 +359,6 @@ address {
     border-left: 1px solid var(--cornflower);
     border-right: 1px solid var(--cornflower);
     padding: 32px 16px;
-    width: 360px;
-    height: 120px;
 }
 
 .section-portfolio-name {
@@ -372,6 +368,7 @@ address {
     line-height: 120%;
     letter-spacing: 0.02em;
     color: var(--navy-blue);
+    margin-bottom: 8px
 }
 
 .section-portfolio-tag {
